@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Info & Sfaturi - Carpații României</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="decorative-element"></div>
+        <div class="decorative-element"></div>
+
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Acasă</a>
+            <div class="dropdown">
+                <button class="dropbtn">Carpații</button>
+                <div class="dropdown-content">
+                   <a href="occidentali.html">Occidentali</a>
+                    <a href="orientali.html">Orientali</a>
+                    <a href="meridionali.html">Meridionali</a>
+                    <a href="varfuri.html">Vârfuri</a>
+                </div>
+            </div>
+            <a href="test.html">Test</a>
+            <a href="natura.html">Natură</a>
+            <a href="info.html" class="active">Info & Sfaturi</a>
+            <a href="contact.html">Contact</a>
+            <div class="language-selector">
+                <button class="language-btn active" onclick="changeLanguage('ro')">RO</button>
+                <button class="language-btn" onclick="changeLanguage('en')">EN</button>
+            </div>
+            <div class="dark-mode-toggle">
+                <button onclick="toggleDarkMode()" title="Dark Mode" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <div class="hero-section">
+            <h1>Informații și Sfaturi Utile</h1>
+            <p>Totul ce trebuie să știi înainte de a merge la munte</p>
+        </div>
+
+        <div class="content">
+            <!-- MAP SECTION -->
+            <h2>Localizare Geografică</h2>
+            <div id="map"></div>
+            <div class="map-info">
+                <p><strong>💡 Sfat:</strong> Poți interacționa cu harta pentru a vedea locații importante din Carpații României. Apasă pe marcatori pentru detalii!</p>
+            </div>
+
+            <!-- FAQ SECTION -->
+            <h2 style="margin-top: 3rem;">Întrebări Frecvente (FAQ)</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Care este cea mai bună perioadă pentru a merge la munte?</div>
+                    <div class="faq-answer">
+                        <p>Perioada ideală depinde de planurile tale:</p>
+                        <ul>
+                            <li><strong>Iunie - Septembrie:</strong> Cel mai bun timp, vreme stabilă și căi accesibile</li>
+                            <li><strong>Aprilie - Mai:</strong> Primăvara montană, ape mai mari dar peisaje frumoase</li>
+                            <li><strong>Octombrie - Noiembrie:</strong> Culori spectaculoase ale toamnei</li>
+                            <li><strong>Decembrie - Martie:</strong> Ski și drumeții pe zăpadă (condiții grele)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Ce echipament trebuie să iau cu mine?</div>
+                    <div class="faq-answer">
+                        <p><strong>Esențial:</strong></p>
+                        <ul>
+                            <li>Cizme de drumeție bune cu sprijin pentru glezne</li>
+                            <li>Rucsac 20-30L cu sistem de susținere</li>
+                            <li>Apă (cel puțin 2 litri)</li>
+                            <li>Mâncare ușor de transportat (fructe, semințe, ciocolată)</li>
+                            <li>Haină impermeabilă și fleece-uri</li>
+                            <li>Chapeu și ochelari de soare</li>
+                            <li>Hărți și GPS</li>
+                            <li>Kit prim ajutor și medicină</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Cât durează o drumeție obișnuită?</div>
+                    <div class="faq-answer">
+                        <p>Durata depinde de dificultate și condiții:</p>
+                        <ul>
+                            <li><strong>Ușor (1-3 ore):</strong> Trasee de cărăruțe, 5-8 km</li>
+                            <li><strong>Mediu (3-6 ore):</strong> Drumeții normale, 8-15 km cu ușoare ascensiuni</li>
+                            <li><strong>Greu (6-12 ore):</strong> Alpinism, 15+ km cu alpinism serios</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Este sigur să merg singur la munte?</div>
+                    <div class="faq-answer">
+                        <p>Drumeții solo sunt posibile cu precauții:</p>
+                        <ul>
+                            <li>Alege trasee bine marcate și populare</li>
+                            <li>Anunță pe cineva unde mergi și când te aștepți înapoi</li>
+                            <li>Poartă GPS și baterie de rezervă</li>
+                            <li>Evita munții neobișnuiți dacă ești începător</li>
+                            <li>Verifica prognoza meteo înainte</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Ce fac dacă mă rătăcesc?</div>
+                    <div class="faq-answer">
+                        <p><strong>Pași importanți:</strong></p>
+                        <ul>
+                            <li>Stai calm și nu te panica</li>
+                            <li>Rămâi pe traseu dacă e posibil</li>
+                            <li>Apelează 112 cu locația ta (dacă ai semnal)</li>
+                            <li>Fă zgomot (fluier sau apeluri) pentru a-ți marca poziția</li>
+                            <li>Caută adăpost dacă e vreme rea</li>
+                            <li>Nu te aventura mai departe dacă nu ești sigur</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Sunt cărți sau ghiduri disponibile?</div>
+                    <div class="faq-answer">
+                        <p>Da! Sunt disponibile mai mulți ghizi de drumeție:</p>
+                        <ul>
+                            <li><strong>Hărți:</strong> Hartă topografică 1:100.000 pentru fiecare masiv</li>
+                            <li><strong>Aplicații mobile:</strong> AllTrails, Maps.me, Wikiloc</li>
+                            <li><strong>Ghiduri tipărite:</strong> "Carpații - Ghid de drumeție" de mai mulți autori</li>
+                            <li><strong>Website-uri:</strong> Versusvis.ro, TransalpinaMountainGuide.ro</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAFETY TIPS SECTION -->
+            <h2 style="margin-top: 3rem;">Sfaturi de Siguranță</h2>
+            <div class="safety-grid">
+                <div class="safety-card">
+                    <i class="fas fa-umbrella"></i>
+                    <h3>Vremea Montană</h3>
+                    <p>Vremea din munți se schimbă rapid. Verifică prognoza zilei și duci haine impermeabile chiar dacă e soare. Vânt puternic și ploaie sunt frecvente chiar și în vară.</p>
+                </div>
+
+                <div class="safety-card">
+                    <i class="fas fa-thermometer"></i>
+                    <h3>Hipotermie și Frig</h3>
+                    <p>Temperatura scade cu ~0.6°C la fiecare 100m altitudine. Poartă straturi de îmbrăcăminte pe care să le poți scoate ușor. Evita transpirația excesivă.</p>
+                </div>
+
+                <div class="safety-card">
+                    <i class="fas fa-mountain"></i>
+                    <h3>Roci și Căderi</h3>
+                    <p>Atenție la roci care se pot rostogoli. Cizme bune cu branț dur sunt esențiale. Merge încet pe terenuri neclare. Nu ignora semnele de pericol.</p>
+                </div>
+
+                <div class="safety-card">
+                    <i class="fas fa-bug"></i>
+                    <h3>Animale și Insecte</h3>
+                    <p>Ursii sunt blânzi dacă nu-i deranjezi. Fă zgomot pe traseu. Evita lăițe și cuiburi. Poartă spray anti-țânțari și verific-te de căpușe.</p>
+                </div>
+
+                <div class="safety-card">
+                    <i class="fas fa-water"></i>
+                    <h3>Hidratare și Oboseală</h3>
+                    <p>Bea apă regulat, nu doar când ai sete. Ia pauze frecvente. Recunoaște semnele de oboseală extremă (dificultate de concentrare, greață).</p>
+                </div>
+
+                <div class="safety-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Acclimatizare</h3>
+                    <p>Dacă mergi pe vârfuri peste 2000m, acclimatizează-te treptat. Beți mai multă apă. Evita eforturile violente în primele zile.</p>
+                </div>
+            </div>
+
+            <!-- BLOG SECTION -->
+            <h2 style="margin-top: 3rem;">Articole și Povești</h2>
+            <div class="blog-grid">
+                <div class="blog-card" onclick="openBlogModal(0)">
+                    <img class="blog-image" src="imagini/blog-transalpina.svg" alt="Transalpina" />
+                    <div class="blog-content">
+                        <div class="blog-date">📅 15 Aprilie 2026</div>
+                        <h3 class="blog-title">Transalpina: Drumul cu cea mai înaltă altitudine din România</h3>
+                        <p class="blog-excerpt">Descoperi ce face Transalpina unică și cum să o percorzi în siguranță. Un ghid complet pentru această cursă populară...</p>
+                        <a href="#" class="blog-read-more" onclick="openBlogModal(0); return false;">Citește mai mult →</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" onclick="openBlogModal(1)">
+                    <img class="blog-image" src="imagini/blog-primavara.svg" alt="Drumeții de primăvară" />
+                    <div class="blog-content">
+                        <div class="blog-date">📅 10 Aprilie 2026</div>
+                        <h3 class="blog-title">Sfaturi pentru Drumeții de Primăvară în Carpați</h3>
+                        <p class="blog-excerpt">Cum să te pregătești pentru aventuri în muntele plin de viață al primăverii. Vremea imprevizibilă și cărări dificile...</p>
+                        <a href="#" class="blog-read-more" onclick="openBlogModal(1); return false;">Citește mai mult →</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" onclick="openBlogModal(2)">
+                    <img class="blog-image" src="imagini/blog-fauna.svg" alt="Fauna Carpaților" />
+                    <div class="blog-content">
+                        <div class="blog-date">📅 5 Aprilie 2026</div>
+                        <h3 class="blog-title">Fauna Carpaților: Cum să vezi ursul brun în habitat natural</h3>
+                        <p class="blog-excerpt">Comportamentul ursilor și ce să faci dacă întâlnești unul. Sfaturi de la experți locali pentru observarea faunei...</p>
+                        <a href="#" class="blog-read-more" onclick="openBlogModal(2); return false;">Citește mai mult →</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" onclick="openBlogModal(3)">
+                    <img class="blog-image" src="imagini/blog-fotografie.svg" alt="Fotografiere în munți" />
+                    <div class="blog-content">
+                        <div class="blog-date">📅 1 Aprilie 2026</div>
+                        <h3 class="blog-title">Fotografiere în Munți: Capturează Frumusețea Carpaților</h3>
+                        <p class="blog-excerpt">Sfaturi și trucuri pentru fotografia de peisaj și wildlife. Echipament recomandat și locații ideale pentru fotografii...</p>
+                        <a href="#" class="blog-read-more" onclick="openBlogModal(3); return false;">Citește mai mult →</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" onclick="openBlogModal(4)">
+                    <img class="blog-image" src="imagini/blog-parcuri.svg" alt="Parcuri naționale" />
+                    <div class="blog-content">
+                        <div class="blog-date">📅 28 Martie 2026</div>
+                        <h3 class="blog-title">Parcuri Naționale din Carpați: Protejarea Naturii</h3>
+                        <p class="blog-excerpt">Regulile și regulamentele din parcurile naționale. Cum să drumeți responsabil și să protejezi mediul...</p>
+                        <a href="#" class="blog-read-more" onclick="openBlogModal(4); return false;">Citește mai mult →</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" onclick="openBlogModal(5)">
+                    <img class="blog-image" src="imagini/blog-moldoveanu.svg" alt="Vârful Moldoveanu" />
+                    <div class="blog-content">
+                        <div class="blog-date">📅 20 Martie 2026</div>
+                        <h3 class="blog-title">Vârful Moldoveanu: Adevărul din Spatele Celui mai Înalt Vârf</h3>
+                        <p class="blog-excerpt">Istoría, geografía și aventura de a ajunge pe cel mai înalt punct al României. Rutele și nivelul de dificultate...</p>
+                        <a href="#" class="blog-read-more" onclick="openBlogModal(5); return false;">Citește mai mult →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Modal -->
+            <div id="blogModal" class="feature-modal">
+                <span class="close-feature-modal" onclick="closeBlogModal()">&times;</span>
+                <div class="feature-modal-content">
+                    <h2 id="blogModalTitle"></h2>
+                    <div id="blogModalImage" style="width: 100%; height: 300px; border-radius: 10px; margin: 1rem 0; background-size: cover; background-position: center;"></div>
+                    <div id="blogModalContent"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Va multumesc pentru vizita!</p>
+        </div>
+    </div>
+
+    <button class="back-to-top" aria-label="Înapoi sus">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMap();
+            setupFAQ();
+        });
+    </script>
+</body>
+</html> 

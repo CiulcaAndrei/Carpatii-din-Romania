@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bgphoto" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f3ecff" />
+      <stop offset="100%" stop-color="#d9e7ff" />
+    </linearGradient>
+    <linearGradient id="camera" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#334057" />
+      <stop offset="100%" stop-color="#1f2a36" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgphoto)" />
+  <path d="M0 420 C200 280 330 310 460 260 C560 230 660 330 800 260 L800 500 L0 500 Z" fill="#9fc0ff" opacity="0.9" />
+  <rect x="140" y="120" width="520" height="300" rx="34" ry="34" fill="#1f2937" opacity="0.95" />
+  <rect x="180" y="165" width="160" height="120" rx="20" ry="20" fill="#111827" />
+  <circle cx="260" cy="225" r="28" fill="#f8f8f8" />
+  <circle cx="260" cy="225" r="18" fill="#1f2937" />
+  <rect x="210" y="225" width="90" height="16" rx="8" ry="8" fill="#8ca3ff" opacity="0.9" />
+  <path d="M340 190 L470 190 L520 260 L460 330 L335 330 Z" fill="#dde7ff" opacity="0.95" />
+  <path d="M360 230 C380 200 430 210 450 240 C470 270 460 310 430 330 C400 350 360 320 360 280 Z" fill="#c4d7ff" />
+  <path d="M230 320 L620 320" stroke="#cbd5e1" stroke-width="18" stroke-linecap="round" opacity="0.9" />
+  <path d="M560 150 L620 150" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity="0.8" />
+  <path d="M620 150 L640 135" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.7" />
+</svg>

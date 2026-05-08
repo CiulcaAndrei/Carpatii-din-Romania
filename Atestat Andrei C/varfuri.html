@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vârfuri - Carpații României</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="decorative-element"></div>
+        <div class="decorative-element"></div>
+
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Acasă</a>
+            <div class="dropdown">
+                <button class="dropbtn active">Carpați</button>
+                <div class="dropdown-content">
+                 <a href="occidentali.html">Occidentali</a>
+                    <a href="orientali.html">Orientali</a>
+                    <a href="meridionali.html">Meridionali</a>
+                    <a href="varfuri.html">Vârfuri</a>
+                </div>
+            </div>
+            <a href="test.html">Test</a>
+            <a href="natura.html">Natură</a>
+            <a href="info.html">Info & Sfaturi</a>
+            <a href="contact.html">Contact</a>
+            <div class="language-selector">
+                <button class="language-btn active" onclick="changeLanguage('ro')">RO</button>
+                <button class="language-btn" onclick="changeLanguage('en')">EN</button>
+            </div>
+            <div class="dark-mode-toggle">
+                <button onclick="toggleDarkMode()" title="Dark Mode" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <div class="hero-section">
+            <h1>Vârfurile Carpaților</h1>
+            <p>Descoperă cele mai înalte vârfuri din Carpații României</p>
+        </div>
+
+        <div class="content">
+            <h3>
+                <pre style="font-family: 'Poppins', sans-serif;">
+Cele mai înalte vârfuri din Carpații României:
+
+Carpații Meridionali:
+1. Vârful Moldoveanu (2544 m) - Munții Făgăraș
+2. Vârful Negoiu (2535 m) - Munții Făgăraș
+3. Vârful Parângul Mare (2519 m) - Munții Parâng
+4. Vârful Peleaga (2509 m) - Munții Retezat
+5. Vârful Omu (2505 m) - Munții Bucegi
+
+Carpații Orientali:
+1. Vârful Pietrosul (2303 m) - Munții Rodnei
+2. Vârful Ineu (2279 m) - Munții Rodnei
+3. Vârful Pietrosul Călimanilor (2100 m) - Munții Călimani
+4. Vârful Ceahlău (1907 m) - Masivul Ceahlău
+5. Vârful Ciucaș (1954 m) - Munții Ciucaș
+
+Carpații Occidentali:
+1. Vârful Curcubăta Mare (1849 m) - Munții Bihor
+2. Vârful Vlădeasa (1836 m) - Munții Vlădeasa
+3. Vârful Găina (1486 m) - Munții Metaliferi
+4. Vârful Semenic (1445 m) - Munții Semenic
+5. Vârful Poiana Ruscă (1374 m) - Munții Poiana Ruscă
+                </pre>
+            </h3>
+        </div>
+
+        <div class="section-title">
+            <h2>Galerie Vârfuri</h2>
+        </div>
+
+        <div class="image-gallery">
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="imagini/moldoveanu.jpg" alt="Vârful Moldoveanu">
+                <div class="gallery-caption">Vârful Moldoveanu (2544 m) - Cel mai înalt vârf din România</div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="imagini/negoiu.jpg" alt="Vârful Negoiu">
+                <div class="gallery-caption">Vârful Negoiu (2535 m) - Al doilea vârf ca înălțime</div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="imagini/omu.jpg" alt="Vârful Omu">
+                <div class="gallery-caption">Vârful Omu (2505 m) - Munții Bucegi</div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="imagini/fagaras.jpg" alt="Munții Făgăraș">
+                <div class="gallery-caption">Munții Făgăraș - Cel mai înalt masiv montan din România</div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="imagini/bucegi.jpg" alt="Munții Bucegi">
+                <div class="gallery-caption">Munții Bucegi - Sfinxul și Babele</div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="imagini/retezat.jpg" alt="Munții Retezat">
+                <div class="gallery-caption">Munții Retezat - Lacuri glaciare și vârfuri spectaculoase</div>
+            </div>
+        </div>
+
+        <!-- Modal pentru imagini -->
+        <div id="imageModal" class="modal" onclick="closeModal(event)">
+            <span class="close-modal" onclick="closeModal(event)">&times;</span>
+            <div class="modal-content">
+                <img class="modal-image" id="modalImg" src="" alt="">
+                <div class="modal-caption" id="modalCaption"></div>
+            </div>
+        </div>
+
+        <!-- Sources Section -->
+        <div class="sources-section">
+            <h3>Surse informaționale</h3>
+            <div class="sources-links">
+                <a href="https://ro.wikipedia.org/wiki/List%C4%83_de_mun%C8%9Bi_din_Rom%C3%A2nia" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-wikipedia-w"></i> Wikipedia - Munții României
+                </a>
+                <a href="https://www.igeografie.ro/" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-map"></i> Institutul de Geografie
+                </a>
+                <a href="https://www.mmediu.ro/categorie/parcuri-nationale/" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-tree"></i> Parcuri Naționale
+                </a>
+                <a href="https://www.icr.ro/" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-university"></i> Institutul Cultural Român
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Va multumesc pentru vizita!</p>
+        </div>
+    </div>
+
+    <button class="back-to-top" aria-label="Înapoi sus">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html> 

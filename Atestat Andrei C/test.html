@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test - Carpații României</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="decorative-element"></div>
+        <div class="decorative-element"></div>
+
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Acasă</a>
+            <div class="dropdown">
+                <button class="dropbtn">Carpați</button>
+                <div class="dropdown-content">
+                   <a href="occidentali.html">Occidentali</a>
+                    <a href="orientali.html">Orientali</a>
+                    <a href="meridionali.html">Meridionali</a>
+                    <a href="varfuri.html">Vârfuri</a>
+                </div>
+            </div>
+            <a href="test.html" class="active">Test</a>
+            <a href="natura.html">Natură</a>
+            <a href="info.html">Info & Sfaturi</a>
+            <a href="contact.html">Contact</a>
+            <div class="language-selector">
+                <button class="language-btn active" onclick="changeLanguage('ro')">RO</button>
+                <button class="language-btn" onclick="changeLanguage('en')">EN</button>
+            </div>
+            <div class="dark-mode-toggle">
+                <button onclick="toggleDarkMode()" title="Dark Mode" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <div class="hero-section">
+            <h1>Test Cunoștințe</h1>
+            <p>Verifică-ți cunoștințele despre Carpații României</p>
+            
+        </div>
+
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li class="separator">></li>
+                <li class="current">Test</li>
+            </ul>
+        </nav>
+
+        <!-- Social Sharing -->
+        <div class="social-sharing">
+            <h4>Împărtășește testul</h4>
+            <div class="social-buttons">
+                <a href="#" class="social-btn facebook" onclick="shareOnFacebook()">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="#" class="social-btn twitter" onclick="shareOnTwitter()">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="#" class="social-btn whatsapp" onclick="shareOnWhatsApp()">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <button class="social-btn copy-link" onclick="copyLink(event)">
+                    <i class="fas fa-link"></i> Copiază link
+                </button>
+            </div>
+        </div>
+
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h2>Test Carpații României</h2>
+                <p>Completează testul pentru a-ți verifica cunoștințele despre Carpații României</p>
+                <div class="question-counter">Întrebarea <span id="currentQuestion">1</span> din 12</div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text">Progres: <span id="progressPercent">0%</span></div>
+                </div>
+                <div class="timer">Timp rămas: <span id="time">10:00</span></div>
+            </div>
+
+            <form id="quiz-form">
+                <!-- Question 1 -->
+                <div class="question-slide active" id="slide-1">
+                    <div class="question">1. Care este cea mai înaltă altitudine din Carpații Occidentali?</div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q1" value="a" required>
+                            <span>1849 m în Munții Bihor, Vârful Curcubăta Mare</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="b">
+                            <span>2544 m în Munții Făgăraș</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="c">
+                            <span>2303 m în Munții Rodnei</span>
+                        </label>
+                    </div>
+                    <div class="navigation-buttons">
+                        <button type="button" class="nav-btn" disabled>Înapoi</button>
+                        <button type="button" class="nav-btn next" onclick="nextQuestion(1)">Înainte</button>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-slide" id="slide-2">
+                    <div class="question">2. Care sunt cele trei grupe majore de munți din Carpații Orientali?</div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q2" value="a" required>
+                            <span>Carpații Maramureșului și Bucovinei, Carpații Moldo-Transilvani, Carpații de Curbură</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="b">
+                            <span>Munții Apuseni, Munții Poiana Ruscă, Munții Banatului</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="c">
+                            <span>Munții Făgăraș, Munții Bucegi, Munții Piatra Craiului</span>
+                        </label>
+                    </div>
+                    <div class="navigation-buttons">
+                        <button type="button" class="nav-btn" onclick="prevQuestion(2)">Înapoi</button>
+                        <button type="button" class="nav-btn next" onclick="nextQuestion(2)">Înainte</button>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-slide" id="slide-3">
+                    <div class="question">3. Ce caracteristică distinctivă au Carpații Meridionali?</div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q3" value="a" required>
+                            <span>Sunt cea mai masivă și spectaculoasă regiune montană, asemănătoare cu Alpii</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="b">
+                            <span>Sunt cea mai fragmentată regiune montană</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="c">
+                            <span>Sunt cea mai joasă regiune montană</span>
+                        </label>
+                    </div>
+                    <div class="navigation-buttons">
+                        <button type="button" class="nav-btn" onclick="prevQuestion(3)">Înapoi</button>
+                        <button type="button" class="nav-btn next" onclick="nextQuestion(3)">Înainte</button>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-slide" id="slide-4">
+                    <div class="question">4. Care este limita vestică a Carpaților Orientali?</div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q4" value="a" required>
+                            <span>Depresiunea Colinară a Transilvaniei, Dealurile de Vest și Câmpia de Vest</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="b">
+                            <span>Dunăre, Barcău și Someș</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="c">
+                            <span>Valea Prahovei și Subcarpații de Curbură</span>
+                        </label>
+                    </div>
+                    <div class="navigation-buttons">
+                        <button type="button" class="nav-btn" onclick="prevQuestion(4)">Înapoi</button>
+                        <button type="button" class="nav-btn next" onclick="nextQuestion(4)">Înainte</button>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-slide" id="slide-5">
+                    <div class="question">5. Ce procent din Carpați se află pe teritoriul României?</div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q5" value="a" required>
+                            <span>51%</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="b">
+                            <span>45%</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="c">
+                            <span>60%</span>
+                        </label>
+                    </div>
+                    <div class="navigation-buttons">
+                        <button type="button" class="nav-btn" onclick="prevQuestion(5)">Înapoi</button>
+                        <button type="button" class="nav-btn next" onclick="nextQuestion(5)">Înainte</button>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-slide" id="slide-6">
+                    <div class="question">6. Care este altitudinea maximă în Carpații Meridionali?</div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q6" value="a" required>
+                            <span>2544 m în Munții Făgăraș</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="b">
+                            <span>1849 m în Munții Bihor</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="c">
+                            <span>2303 m în Munții Rodnei</span>
+                        </label>
+                    </div>
+                    <div class="navigation-buttons">
+                        <button type="button" class="nav-btn" onclick="prevQuestion(6)">Înapoi</button>
+                        <button type="button" class="nav-btn next" onclick="nextQuestion(6)">Înainte</button>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-slide" id="slide-7">
+                    <div class="question">7. Ce reprezintă "flișul" în alcătuirea geografică a Carpaților Occidentali?</div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q7" value="a" required>
+                            <span>Un complex de roci sedimentare, alternând strate de gresii și marne</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="b">
+                            <span>Roci vulcanice eruptive</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="c">
+                            <span>Roci metamorfice cristaline</span>
+                        </label>
+                    </div>
+                    <div class="navigation-buttons">
+                        <button type="button" class="nav-btn" onclick="prevQuestion(7)">Înapoi</button>
+                        <button type="button" class="nav-btn next" onclick="nextQuestion(7)">Înainte</button>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-slide" id="slide-8">
+                    <div class="question">8. Care este limita estică a Carpaților Orientali?</div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q8" value="a" required>
+                            <span>Valea Siretului și Subcarpații Moldovei</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="b">
+                            <span>Depresiunea Colinară a Transilvaniei</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="c">
+                            <span>Dunăre și Barcău</span>
+                        </label>
+                    </div>
+                    <div class="navigation-buttons">
+                        <button type="button" class="nav-btn" onclick="prevQuestion(8)">Înapoi</button>
+                        <button type="button" class="nav-btn next" onclick="nextQuestion(8)">Înainte</button>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-slide" id="slide-9">
+                    <div class="question">9. Care este cel mai mare lac glaciar din Carpații Meridionali?</div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q9" value="a" required>
+                            <span>Lacul Vidraru</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="b">
+                            <span>Lacul Bâlea</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="c">
+                            <span>Lacul Iezer</span>
+                        </label>
+                    </div>
+                    <div class="navigation-buttons">
+                        <button type="button" class="nav-btn" onclick="prevQuestion(9)">Înapoi</button>
+                        <button type="button" class="nav-btn next" onclick="nextQuestion(9)">Înainte</button>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-slide" id="slide-10">
+                    <div class="question">10. Ce tip de relief predomină în Munții Apuseni?</div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q10" value="a" required>
+                            <span>Vulcanic</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10" value="b">
+                            <span>Carstic</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10" value="c">
+                            <span>Glaciar</span>
+                        </label>
+                    </div>
+                    <div class="navigation-buttons">
+                        <button type="button" class="nav-btn" onclick="prevQuestion(10)">Înapoi</button>
+                        <button type="button" class="nav-btn next" onclick="nextQuestion(10)">Înainte</button>
+                    </div>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="question-slide" id="slide-11">
+                    <div class="question">11. Care este vârful principal al Munților Retezat?</div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q11" value="a" required>
+                            <span>Peleaga</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q11" value="b">
+                            <span>Parângul Mare</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q11" value="c">
+                            <span>Moldoveanu</span>
+                        </label>
+                    </div>
+                    <div class="navigation-buttons">
+                        <button type="button" class="nav-btn" onclick="prevQuestion(11)">Înapoi</button>
+                        <button type="button" class="nav-btn next" onclick="nextQuestion(11)">Înainte</button>
+                    </div>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="question-slide" id="slide-12">
+                    <div class="question">12. În ce grupă montană se află Cheile Turzii?</div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q12" value="a" required>
+                            <span>Munții Apuseni</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q12" value="b">
+                            <span>Munții Făgăraș</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q12" value="c">
+                            <span>Munții Rodnei</span>
+                        </label>
+                    </div>
+                    <div class="navigation-buttons">
+                        <button type="button" class="nav-btn" onclick="prevQuestion(12)">Înapoi</button>
+                        <button type="button" class="nav-btn next" onclick="finishQuiz()">Finalizează</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" style="display: none;">Finalizează Test</button>
+            </form>
+
+            <div id="result" class="result-container">
+                <h3>Rezultatele Tale</h3>
+                <div class="score">Scor: <span id="score">0</span>/12</div>
+                <div id="achievements"></div>
+                <div class="feedback" id="feedback"></div>
+                
+                <!-- Certificate Section -->
+                <div class="certificate-container">
+                    <h4>📜 Obține Certificatul Tău</h4>
+                    <input type="text" id="certificateName" placeholder="Introdu numele tău" style="padding: 8px; margin: 10px 0; width: 100%; border-radius: 5px; border: 1px solid #ccc;">
+                    <button class="certificate-download-btn" onclick="downloadCertificateWithName()">Descarcă Certificat PDF</button>
+                </div>
+                
+                <button class="review-btn" onclick="showReview()">Revizuiește răspunsurile</button>
+                <button class="review-btn" onclick="restartQuiz()">Reîncearcă testul</button>
+            </div>
+            
+            <!-- Leaderboard Section -->
+            <h2 style="margin-top: 3rem; text-align: center;">🏆 Topul Celor Mai Buni Jucători</h2>
+            <div class="leaderboard-container">
+                <table class="leaderboard-table"></table>
+            </div>
+
+            <div id="reviewMode" class="review-mode">
+                <h3>Revizuire Răspunsuri</h3>
+                <div id="reviewContent"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Va multumesc pentru vizita!</p>
+        </div>
+    </div>
+
+    <div class="floating-register" id="floatingRegister">
+        <div class="register-icon" onclick="toggleRegisterDropdown()">
+            <i class="fas fa-user-plus"></i>
+        </div>
+        <div class="register-dropdown" id="registerDropdown">
+            <button class="close-dropdown" onclick="toggleRegisterDropdown()">&times;</button>
+            <form id="registerForm" onsubmit="handleRegister(event)">
+                <input type="email" id="registerEmail" placeholder="Introdu adresa de email" required>
+                <input type="password" id="registerPassword" placeholder="Introdu parola" required>
+                <button type="submit">Autentificare</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function downloadCertificateWithName() {
+            const userName = document.getElementById('certificateName').value;
+            if (!userName.trim()) {
+                alert('Te rog, introdu-ți numele!');
+                return;
+            }
+            
+            const score = parseInt(document.getElementById('score').textContent);
+            downloadCertificate(userName, score, 12);
+            
+            // Save to leaderboard
+            saveTestScore(score, 12, userName);
+            displayLeaderboard();
+        }
+    </script>
+</body>
+</html> 

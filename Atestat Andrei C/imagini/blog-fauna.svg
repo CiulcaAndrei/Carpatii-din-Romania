@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky3" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#8cd8ff" />
+      <stop offset="100%" stop-color="#e7f7ff" />
+    </linearGradient>
+    <linearGradient id="mount" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#5f6b4f" />
+      <stop offset="100%" stop-color="#34422b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky3)" />
+  <path d="M0 420 C120 360 240 420 360 370 C480 320 620 420 760 360 L800 400 L800 500 L0 500 Z" fill="#395f48" />
+  <path d="M0 460 C120 380 240 450 360 400 C480 350 620 460 760 390 L800 430 L800 500 L0 500 Z" fill="#4f7b56" opacity="0.95" />
+  <path d="M180 380 C240 310 340 330 460 280 C580 230 680 300 760 280 L760 360 L180 360 Z" fill="url(#mount)" />
+  <path d="M200 360 C240 320 300 330 340 300 C380 270 420 300 460 290 C500 280 560 300 600 270 C640 240 700 260 740 290 L740 340 L200 340 Z" fill="#2f3d25" />
+  <ellipse cx="390" cy="230" rx="28" ry="24" fill="#ffffff" opacity="0.9" />
+  <ellipse cx="430" cy="210" rx="26" ry="22" fill="#ffffff" opacity="0.9" />
+  <path d="M315 325 L280 375" stroke="#2d2d2b" stroke-width="18" stroke-linecap="round" />
+  <path d="M445 325 L490 380" stroke="#2d2d2b" stroke-width="16" stroke-linecap="round" />
+  <path d="M335 340 C360 380 420 380 450 340" fill="#2e2f28" />
+  <path d="M120 380 C140 350 180 350 200 380" fill="#e1f6e7" opacity="0.7" />
+  <path d="M700 320 C720 300 760 300 780 320" fill="#e8f7e9" opacity="0.5" />
+</svg>

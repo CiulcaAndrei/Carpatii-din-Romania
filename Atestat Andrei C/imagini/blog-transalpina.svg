@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#476a9b" />
+      <stop offset="55%" stop-color="#8db8e3" />
+      <stop offset="100%" stop-color="#cde4ff" />
+    </linearGradient>
+    <linearGradient id="sun" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff3b3" />
+      <stop offset="100%" stop-color="#ffb763" />
+    </linearGradient>
+    <linearGradient id="road" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#d2d5e3" />
+      <stop offset="100%" stop-color="#9aa3b8" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky)" />
+  <circle cx="640" cy="100" r="68" fill="url(#sun)" opacity="0.95" />
+  <path d="M0 420 C120 340 260 380 380 320 C500 260 620 340 800 280 L800 500 L0 500 Z" fill="#37567a" />
+  <path d="M0 450 C140 360 260 420 420 350 C560 290 660 380 800 330 L800 500 L0 500 Z" fill="#5d78b1" opacity="0.95" />
+  <path d="M0 480 C170 380 280 460 430 390 C580 320 700 430 800 380 L800 500 L0 500 Z" fill="#7b8cc5" opacity="0.9" />
+  <path d="M220 250 C260 230 340 230 360 250 C380 270 430 260 460 250 C490 240 530 250 560 240 C590 230 640 250 660 270 L660 320 L220 320 Z" fill="#f8f2d5" opacity="0.8" />
+  <path d="M280 260 L320 260 L340 290 L300 290 Z" fill="#ffffff" opacity="0.85" />
+  <path d="M430 270 L470 270 L490 300 L450 300 Z" fill="#ffffff" opacity="0.85" />
+  <path d="M220 360 L240 380 L360 360 L340 340 Z" fill="url(#road)" />
+  <path d="M230 378 L300 350 L320 350 L250 380 Z" fill="#f1f4fb" opacity="0.95" />
+  <circle cx="70" cy="120" r="7" fill="#ffffff" opacity="0.8" />
+  <circle cx="90" cy="85" r="5" fill="#ffffff" opacity="0.7" />
+  <circle cx="720" cy="145" r="6" fill="#ffffff" opacity="0.7" />
+</svg>

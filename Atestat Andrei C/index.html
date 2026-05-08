@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carpații României - Acasă</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="decorative-element"></div>
+        <div class="decorative-element"></div>
+
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Acasă</a>
+            <div class="dropdown">
+                <button class="dropbtn">Carpații</button>
+                <div class="dropdown-content">
+                    <a href="occidentali.html">Occidentali</a>
+                    <a href="orientali.html">Orientali</a>
+                    <a href="meridionali.html">Meridionali</a>
+                    <a href="varfuri.html">Vârfuri</a>
+                </div>
+            </div>
+            <a href="test.html">Test</a>
+            <a href="natura.html">Natură</a>
+            <a href="info.html">Info & Sfaturi</a>
+            <a href="contact.html">Contact</a>
+            <div class="language-selector">
+                <button class="language-btn active" onclick="changeLanguage('ro')">RO</button>
+                <button class="language-btn" onclick="changeLanguage('en')">EN</button>
+            </div>
+            <div class="dark-mode-toggle">
+                <button onclick="toggleDarkMode()" title="Dark Mode" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+            <div>
+                <h1>Carpații României</h1>
+                <p>Descoperă măreția și frumusețea munților noștri</p>
+            </div>
+        </div>
+
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb">
+            <ul>
+                <li class="current">Acasă</li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <!-- Welcome Section -->
+            <h2 style="text-align: center; color: var(--primary-color); margin: 2rem 0;">Bine ai venit în lumea Carpaților</h2>
+            
+            <div class="welcome-text">
+                <p>
+                    Carpații României sunt o parte integrantă a lanțului montan al Carpaților, extins pe o suprafață de aproximativ 
+                    7.600 km² pe teritoriul României. Aceștimunți reprezentă un ecosistem unic și plin de viață, cu o biodiversitate 
+                    remarcabilă și resurse naturale variate.
+                </p>
+                <p>
+                    Explorează cu noi frumusețea peisajelor, află despre flora și fauna care locuiesc aici, și testează-ți 
+                    cunoștințele despre aceste munți fascinatori.
+                </p>
+            </div>
+
+            <!-- Statistics -->
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-number">2.544 m</div>
+                    <div class="stat-label">Altitudinea maximă (Moldoveanu)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">3.500+</div>
+                    <div class="stat-label">Specii de plante vasculare</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Specii de păsări</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">51%</div>
+                    <div class="stat-label">Din Carpații Europei</div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <h2 style="text-align: center; color: var(--primary-color); margin: 3rem 0 2rem;">Ce vei descoperi</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card" onclick="openFeatureModal(0)">
+                    <i class="fas fa-mountain"></i>
+                    <h3>Trei Grupuri Majore</h3>
+                    <p>Explorează Carpații Occidentali, Orientali și Meridionali, cu landscape-uri și caracteristici unice.</p>
+                </div>
+                <div class="feature-card" onclick="openFeatureModal(1)">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Biodiversitate Bogată</h3>
+                    <p>Descoperă flora și fauna specifică fiecărei regiuni montane, inclusiv specii endemice și protejate.</p>
+                </div>
+                <div class="feature-card" onclick="openFeatureModal(2)">
+                    <i class="fas fa-flag-checkered"></i>
+                    <h3>Vârfuri Spectaculoase</h3>
+                    <p>Cunoaște vârfurile cele mai înalte și mai frumoase ale Carpaților României.</p>
+                </div>
+                <div class="feature-card" onclick="openFeatureModal(3)">
+                    <i class="fas fa-brain"></i>
+                    <h3>Test Interactiv</h3>
+                    <p>Testează-ți cunoștințele printr-un test Kahoot-style cu întrebări despre Carpații României.</p>
+                </div>
+                <div class="feature-card" onclick="openFeatureModal(4)">
+                    <i class="fas fa-camera"></i>
+                    <h3>Galerii de Imagini</h3>
+                    <p>Admira fotografiile spectaculoase ale naturii și peisajelor carpatine.</p>
+                </div>
+                <div class="feature-card" onclick="openFeatureModal(5)">
+                    <i class="fas fa-map"></i>
+                    <h3>Informații Detaliate</h3>
+                    <p>Ghiduri complete cu date geografice, climatice și ecological importante.</p>
+                </div>
+            </div>
+
+            <!-- Feature Modal -->
+            <div id="featureModal" class="feature-modal">
+                <span class="close-feature-modal" onclick="closeFeatureModal()">&times;</span>
+                <div class="feature-modal-content">
+                    <h2 id="featureTitle"></h2>
+                    <p id="featureDescription"></p>
+                </div>
+            </div>
+
+            <!-- Regions Showcase -->
+            <h2 style="text-align: center; color: var(--primary-color); margin: 3rem 0 2rem;">Regiunile Carpaților</h2>
+            
+            <div class="regions-showcase">
+                <div class="region-card" onclick="startImageGallery('occidentali')">
+                    <img src="imagini/muntii-apuseni.jpg" alt="Carpații Occidentali">
+                    <div class="region-card-content">
+                        <h3>Carpații Occidentali</h3>
+                        <p>Grupo discrete cu Munții Apuseni, Poiana Ruscă și Banatul. Altitudine maximă: 1.849 m. <strong>Clic pentru galerie!</strong></p>
+                        <a href="occidentali.html">Află mai mult →</a>
+                    </div>
+                </div>
+                <div class="region-card" onclick="startImageGallery('orientali')">
+                    <img src="imagini/rodnei.jpg" alt="Carpații Orientali">
+                    <div class="region-card-content">
+                        <h3>Carpații Orientali</h3>
+                        <p>Grupa mai compactă cu peisaje spectaculoase. Include Munții Rodnei și alte lanțuri importante. <strong>Clic pentru galerie!</strong></p>
+                        <a href="orientali.html">Află mai mult →</a>
+                    </div>
+                </div>
+                <div class="region-card" onclick="startImageGallery('meridionali')">
+                    <img src="imagini/fagaras.jpg" alt="Carpații Meridionali">
+                    <div class="region-card-content">
+                        <h3>Carpații Meridionali</h3>
+                        <p>Cea mai masivă regiune cu vârfuri de peste 2.000m. Acasă pentru Moldoveanu. <strong>Clic pentru galerie!</strong></p>
+                        <a href="meridionali.html">Află mai mult →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Image Gallery Modal -->
+            <div id="imageGalleryModal" class="feature-modal">
+                <span class="close-feature-modal" onclick="closeImageGallery()">&times;</span>
+                <div class="feature-modal-content">
+                    <div style="text-align: center;">
+                        <h2 id="galleryTitle"></h2>
+                        <img id="galleryImage" src="" alt="">
+                        <p id="galleryCaption"></p>
+                        <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center;">
+                            <button onclick="previousGalleryImage()" style="padding: 0.5rem 1.5rem; background: var(--secondary-color); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: 600;">← Înapoi</button>
+                            <span id="galleryCounter" style="align-self: center; font-weight: 600;"></span>
+                            <button onclick="nextGalleryImage()" style="padding: 0.5rem 1.5rem; background: var(--secondary-color); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: 600;">Următoare →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vârfuri Section -->
+            <h2 style="text-align: center; color: var(--primary-color); margin: 3rem 0 2rem;">Vârfuri Importante</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">
+                Descoperă vârfurile cele mai înalte și fascinante din Carpații României
+            </p>
+            <a href="varfuri.html" style="display: block; text-align: center; color: var(--secondary-color); font-size: 1.1rem; font-weight: 600; margin-bottom: 2rem;">
+                Vezi galeria vârfurilor →
+            </a>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h2>Gata să testezi cunoștințele?</h2>
+                <p style="margin-bottom: 2rem; font-size: 1.1rem;">
+                    Participă la testul nostru interactiv și descoperă cât de mult cunoști despre Carpații României!
+                </p>
+                <div class="cta-buttons">
+                    <a href="test.html" class="cta-btn">Ia Testul Acum</a>
+                    <a href="natura.html" class="cta-btn">Explore Nature</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sources Section -->
+        <div class="sources-section">
+            <h3>Surse informaționale</h3>
+            <div class="sources-links">
+                <a href="https://ro.wikipedia.org/wiki/Carpa%C8%9Bii" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-wikipedia-w"></i> Wikipedia - Carpații
+                </a>
+                <a href="https://www.mmediu.ro/" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-leaf"></i> Ministerul Mediului
+                </a>
+                <a href="https://www.igeografie.ro/" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-map"></i> Institutul de Geografie
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Vă mulțumesc pentru vizită!</p>
+        </div>
+    </div>
+
+    <button class="back-to-top" aria-label="Înapoi sus">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carpații Orientali</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="decorative-element"></div>
+        <div class="decorative-element"></div>
+
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Acasă</a>
+            <div class="dropdown">
+                <button class="dropbtn active">Carpați</button>
+                <div class="dropdown-content">
+                   <a href="occidentali.html">Occidentali</a>
+                    <a href="orientali.html">Orientali</a>
+                    <a href="meridionali.html">Meridionali</a>
+                    <a href="varfuri.html">Vârfuri</a>
+                </div>
+            </div>
+            <a href="test.html">Test</a>
+            <a href="natura.html">Natură</a>
+            <a href="info.html">Info & Sfaturi</a>
+            <a href="contact.html">Contact</a>
+            <div class="language-selector">
+                <button class="language-btn active" onclick="changeLanguage('ro')">RO</button>
+                <button class="language-btn" onclick="changeLanguage('en')">EN</button>
+            </div>
+            <div class="dark-mode-toggle">
+                <button onclick="toggleDarkMode()" title="Dark Mode" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <div class="hero-section">
+            <h1>Carpații Orientali</h1>
+            <p>Descoperă frumusețea și măreția munților din estul României</p>
+        </div>
+
+        <div class="content">
+            <h3>
+                <pre style="font-family: 'Poppins', sans-serif;">
+Carpații Orientali, unul din cele trei mari segmente montane ale munților Carpați 
+de pe teritoriul României. Carpații Orientali se găsesc în partea estică a României, 
+prezentând o varietate largă de roci, aspecte geofizice, geologice și morfologice, 
+înălțimi, împăduriri, floră și faună.
+
+<h2>Limite Carpații Orientali</h2>
+Sunt cuprinși între granița cu Ucraina (Nord), Depresiunea Colinară a Transilvaniei, 
+Dealurile de Vest și Câmpia de Vest (în Vest), Subcarpații de Curbură și Valea Prahovei 
+(Sud), Podișul Moldovei și Subcarpații Moldovei (Est).
+
+<h2>Caracteristici Carpații Orientali</h2>
+Între aceste limite, au o serie de caracteristici ale reliefului care îi diferențiază 
+de celelalte ramuri carpatice, cum ar fi:
+
+* înălțimile au valori mijlocii; înălțimile maxime depășesc 2000 m (în Munții Rodnei 
+și Munții Călimani) sau se apropie de această altitudine (în Ciucaș, Munții 
+Maramureșului și Ceahlău)
+* au culmi paralele, orientate pe direcția NV-SE (în nord și centru) sau "curbate" 
+(în sud)
+* sunt formați din trei fâșii paralele care reflectă alcătuirea geologică a substratului:
+
+  a) în vest există un aliniament de munți vulcanici
+  b) în centru, munți alcătuiți din roci dure (predominant șisturi cristaline)
+  c) în est și sud, munți alcătuiți din roci sedimentare cutate 
+(denumite "flis" = formațiune geologică specifică, alcătuită din strate sedimentare cutate)
+
+* sunt fragmentați de depresiuni numeroase 
+(cum ar fi depresiunile Brașovului și Maramureșului), văi și trecători
+* au forme variate de relief, cum ar fi: relief vulcanic (cu cratere, conuri și platouri), 
+îndeosebi în munții Călimani, Gurghiului și Harghitei, relief glaciar (în Munții Rodnei), 
+un relief specific datorat rocilor (îndeosebi în masivele Ceahlău și Ciucaș)
+* relief carstic cu peșteri și chei în Carpații de Curbură
+
+<h2>Grupe muntoase în Carpații Orientali</h2>
+În Carpații Orientali se disting trei grupe majore de munți:
+
+* Carpații Maramureșului și Bucovinei, sau grupa nordică
+* Carpații Moldo-Transilvani, sau grupa centrală
+* Carpații de Curbură, sau grupa sudică
+                </pre>
+            </h3>
+        </div>
+
+        <div class="section-title">
+            <h2>Galerie Carpați Orientali</h2>
+        </div>
+
+        <div class="image-gallery">
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="imagini/orientali-907x1024.webp" alt="Harta Carpați Orientali">
+                <div class="gallery-caption">Harta Carpaților Orientali</div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="imagini/ceahlau.jpg" alt="Ceahlău">
+                <div class="gallery-caption">Masivul Ceahlău - Monument al naturii</div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="imagini/ciucas.jpg" alt="Ciucaș">
+                <div class="gallery-caption">Munții Ciucaș - Forme spectaculoase</div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="imagini/rodnei.jpg" alt="Munții Rodnei">
+                <div class="gallery-caption">Munții Rodnei - Peisaje alpine</div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="imagini/calimani.jpg" alt="Munții Călimani">
+                <div class="gallery-caption">Munții Călimani - Relief vulcanic</div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="imagini/cheile-bicazului.jpg" alt="Cheile Bicazului">
+                <div class="gallery-caption">Cheile Bicazului - Minune naturală</div>
+            </div>
+        </div>
+
+        <!-- Modal pentru imagini -->
+        <div id="imageModal" class="modal" onclick="closeModal(event)">
+            <span class="close-modal" onclick="closeModal(event)">&times;</span>
+            <div class="modal-content">
+                <img class="modal-image" id="modalImg" src="" alt="">
+                <div class="modal-caption" id="modalCaption"></div>
+            </div>
+        </div>
+
+        <!-- Sources Section -->
+        <div class="sources-section">
+            <h3>Surse informaționale</h3>
+            <div class="sources-links">
+                <a href="https://ro.wikipedia.org/wiki/Carpa%C8%9Bii_Orientali" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-wikipedia-w"></i> Wikipedia - Carpații Orientali
+                </a>
+                <a href="https://www.igeografie.ro/" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-map"></i> Institutul de Geografie
+                </a>
+                <a href="https://www.mmediu.ro/categorie/parcuri-nationale/" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-tree"></i> Parcuri Naționale
+                </a>
+                <a href="https://www.icr.ro/" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-university"></i> Institutul Cultural Român
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Va multumesc pentru vizita!</p>
+        </div>
+    </div>
+
+    <button class="back-to-top" aria-label="Înapoi sus">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

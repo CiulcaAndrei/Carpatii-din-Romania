@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carpații Meridionali</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="decorative-element"></div>
+        <div class="decorative-element"></div>
+
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Acasă</a>
+            <div class="dropdown">
+                <button class="dropbtn active">Carpații</button>
+                <div class="dropdown-content">
+                   <a href="occidentali.html">Occidentali</a>
+                    <a href="orientali.html">Orientali</a>
+                    <a href="meridionali.html">Meridionali</a>
+                    <a href="varfuri.html">Vârfuri</a>
+                </div>
+            </div>
+            <a href="test.html">Test</a>
+            <a href="natura.html">Natură</a>
+            <a href="info.html">Info & Sfaturi</a>
+            <a href="contact.html">Contact</a>
+            <div class="language-selector">
+                <button class="language-btn active" onclick="changeLanguage('ro')">RO</button>
+                <button class="language-btn" onclick="changeLanguage('en')">EN</button>
+            </div>
+            <div class="dark-mode-toggle">
+                <button onclick="toggleDarkMode()" title="Dark Mode" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <div class="hero-section">
+            <h1>Carpații Meridionali</h1>
+            <p>Descoperă frumusețea și măreția munților din sudul României</p>
+        </div>
+
+        <div class="content">
+            <h3>
+                <pre style="font-family: 'Poppins', sans-serif;">
+Carpații Meridionali (Alpii Transilvaniei) reprezintă cel mai masiv și mai înalt 
+segment al Carpaților Românești. Sunt situați în partea de sud a țării, între Valea 
+Prahovei (la est) și culoarul Timiș-Cerna (la vest).
+
+<h2>Limite Carpații Meridionali</h2>
+La nord se învecinează cu Depresiunea Colinară a Transilvaniei, iar la sud cu 
+Subcarpații Getici și Podișul Getic. Carpații Meridionali au o lungime de aproximativ 
+250 km și o lățime ce variază între 45 și 70 km.
+
+<h2>Caracteristici principale</h2>
+- Cei mai înalți și mai masivi munți din România
+- Relief glaciar bine dezvoltat
+- Peisaje alpine spectaculoase
+- Biodiversitate bogată
+- Numeroase trasee turistice
+
+<h2>Grupe muntoase principale</h2>
+1. Munții Bucegi
+- Vârful Omu (2505 m)
+- Sfinxul și Babele
+- Platoul Bucegi
+
+2. Munții Făgăraș
+- Vârful Moldoveanu (2544 m)
+- Vârful Negoiu (2535 m)
+- Transfăgărășanul
+
+3. Munții Parâng
+- Vârful Parângul Mare (2519 m)
+- Stațiunea Rânca
+- Transalpina
+
+4. Munții Retezat
+- Vârful Peleaga (2509 m)
+- Lacuri glaciare
+- Parcul Național Retezat
+                </pre>
+            </h3>
+        </div>
+
+        <div class="section-title">
+            <h2>Galerie Carpați Meridionali</h2>
+        </div>
+
+        <div class="image-gallery">
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="imagini/fagaras.jpg" alt="Munții Făgăraș">
+                <div class="gallery-caption">Munții Făgăraș - Vedere panoramică</div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="imagini/bucegi.jpg" alt="Munții Bucegi">
+                <div class="gallery-caption">Munții Bucegi - Sfinxul</div>
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="imagini/retezat.jpg" alt="Munții Retezat">
+                <div class="gallery-caption">Munții Retezat - Lacul Bucura</div>
+            </div>
+        </div>
+
+        <!-- Modal pentru imagini -->
+        <div id="imageModal" class="modal" onclick="closeModal(event)">
+            <span class="close-modal" onclick="closeModal(event)">&times;</span>
+            <div class="modal-content">
+                <img class="modal-image" id="modalImg" src="" alt="">
+                <div class="modal-caption" id="modalCaption"></div>
+            </div>
+        </div>
+
+        <!-- Sources Section -->
+        <div class="sources-section">
+            <h3>Surse informaționale</h3>
+            <div class="sources-links">
+                <a href="https://ro.wikipedia.org/wiki/Carpa%C8%9Bii_Meridionali" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-wikipedia-w"></i> Wikipedia - Carpații Meridionali
+                </a>
+                <a href="https://www.igeografie.ro/" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-map"></i> Institutul de Geografie
+                </a>
+                <a href="https://www.mmediu.ro/categorie/parcuri-nationale/" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-tree"></i> Parcuri Naționale
+                </a>
+                <a href="https://www.icr.ro/" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-university"></i> Institutul Cultural Român
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Va multumesc pentru vizita!</p>
+        </div>
+    </div>
+
+    <button class="back-to-top" aria-label="Înapoi sus">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div class="floating-register" id="floatingRegister">
+        <div class="register-icon" onclick="toggleRegisterDropdown()">
+            <i class="fas fa-user-plus"></i>
+        </div>
+        <div class="register-dropdown" id="registerDropdown">
+            <button class="close-dropdown" onclick="toggleRegisterDropdown()">&times;</button>
+            <form id="registerForm" onsubmit="handleRegister(event)">
+                <input type="email" id="registerEmail" placeholder="Introdu adresa de email" required>
+                <input type="password" id="registerPassword" placeholder="Introdu parola" required>
+                <button type="submit">Autentificare</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
